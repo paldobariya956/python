@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Students</h1>
+    <a href="/add">Add Student</a>
+
+    <ul>
+        {% for s in students %}
+            <li>
+                {{ s[1] }} (Age: {{ s[2] }})
+                <a href="/delete/{{ s[0] }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
